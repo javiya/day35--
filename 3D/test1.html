@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    perspective: 1000px;
+  }
+
+  .parent {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 1, 0deg);
+    transition: all 2s;
+
+    /*animation: donghua1 2s infinite;*/
+  }
+
+  .parent:hover {
+    transform: rotate3d(1, 1, 1, 45deg) scale(2);
+  }
+
+  @keyframes donghua1 {
+    from {
+      transform: rotate3d(1, 1, 1, 0deg);
+    }
+
+    to {
+      transform: rotate3d(1, 1, 1, 360deg);
+    }
+  }
+
+
+  .parent .child {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+
+    transition: all 2s;
+  }
+
+  .front {
+    background: url(../img/src=http___dingyue.ws.126.net_2020_0515_465567a6j00qadpfz001cc000hs00b4c.jpg&refer=http___dingyue.ws.126.webp);
+    background-size: auto 100%;
+    background-position: center;
+
+    transform: translateZ(100px);
+
+    animation: donghua2 10s infinite;
+  }
+
+  .back {
+    background: url(../img/src=http___img.jj20.com_up_allimg_1113_051220112022_200512112022-1-1200.jpg&refer=http___img.jj20.webp);
+    background-size: auto 100%;
+    background-position: center;
+    transform: translateZ(-100px);
+  }
+
+  .parent:hover .back {
+    transform: translateZ(-200px);
+  }
+
+  .left {
+    background: url(../img/src=http___img.jj20.com_up_allimg_1113_0F420110430_200F4110430-6-1200.jpg&refer=http___img.jj20.webp);
+    background-size: auto 100%;
+    background-position: center;
+    transform: rotateY(90deg) translateZ(100px);
+
+  }
+
+  .parent:hover .left {
+    transform: rotateY(90deg) translateZ(200px);
+  }
+
+
+  .right {
+    background: url(../img/src=http___img.jj20.com_up_allimg_1114_0G020114924_200G0114924-15-1200.jpg&refer=http___img.jj20.webp);
+    background-size: auto 100%;
+    background-position: center;
+    transform: rotateY(-90deg) translateZ(100px);
+
+  }
+
+  .parent:hover .right {
+    transform: rotateY(-90deg) translateZ(200px);
+  }
+
+  .top {
+    background: url(../img/src=http___img.jj20.com_up_allimg_4k_s_02_2109242312005c1-0-lp.jpg&refer=http___img.jj20.webp);
+    background-size: auto 100%;
+    background-position: center;
+    transform: rotateX(90deg) translateZ(100px);
+  }
+
+  .parent:hover .top {
+    transform: rotateX(90deg) translateZ(200px);
+  }
+
+  .bottom {
+    background: url(../img/src=http___img.jj20.com_up_allimg_tp08_24041224115258-lp.jpg&refer=http___img.jj20.webp);
+    background-size: auto 100%;
+    background-position: center;
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+
+  .parent:hover .bottom {
+    transform: rotateX(-90deg) translateZ(200px);
+  }
+
+  @keyframes donghua2 {
+    0% {
+      transform: translateZ(100px);
+    }
+
+    50% {
+      transform: translateZ(200px);
+    }
+
+    100% {
+      transform: translateZ(100px);
+    }
+  }
+</style>
+
+<body>
+  <div class="parent">
+    <div class="child front"></div>
+    <div class="child back"></div>
+    <div class="child left"></div>
+    <div class="child right"></div>
+    <div class="child bottom"></div>
+    <div class="child top"></div>
+  </div>
+</body>
+
+</html>

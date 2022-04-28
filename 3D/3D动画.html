@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Leon</title>
+  <style>
+    body {
+      perspective: 1200px;
+    }
+
+    section {
+      transform: rotate3d(0, 1, 0, 30deg);
+      transform-style: preserve-3d;
+      animation: myMove 10s linear infinite;
+    }
+
+    div {
+      width: 300px;
+      height: 300px;
+      font-size: 50px;
+      line-height: 300px;
+      text-align: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: 200px auto;
+      transition: 2s;
+
+    }
+
+    img{
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+    }
+    /* div:nth-of-type(1):hover{ */
+    /* 3D移动 */
+    /* transform: translateX(100px);  */
+    /* transform: translateY(100px);  */
+    /* transform: translateZ(100px);  */
+    /* 旋转 */
+    /* transform: rotateX(30deg); */
+    /* transform: rotateY(30deg); */
+    /* transform: rotateZ(30deg); */
+    /* transform: rotate3d(0.5,0.5,0.5,30deg); */
+    /* } */
+    div:nth-of-type(1) {
+      transform: translateZ(150px);
+    }
+
+    div:nth-of-type(6) {
+      transform: translateZ(-150px) rotateY(180deg);
+    }
+
+    div:nth-of-type(2) {
+      transform: rotateX(90deg) translateZ(150px);
+    }
+
+    div:nth-of-type(4) {
+      transform: rotateX(-90deg) translateZ(150px);
+    }
+
+    div:nth-of-type(3) {
+      transform: rotateY(90deg) translateZ(150px);
+    }
+
+    div:nth-of-type(5) {
+      transform: rotateY(-90deg) translateZ(150px);
+    }
+
+    @keyframes myMove {
+      0% {
+        transform: rotate3d(0, 1, 0, 0deg)
+      }
+
+      20% {
+        transform: rotate3d(0, 1, 0, 60deg)
+      }
+
+      40% {
+        transform: rotate3d(0, 1, 0, 120deg)
+      }
+
+      60% {
+        transform: rotate3d(0, 1, 0, 180deg)
+      }
+
+      80% {
+        transform: rotate3d(0, 1, 0, 240deg)
+      }
+
+      90% {
+        transform: rotate3d(0, 1, 0, 300deg)
+      }
+
+      100% {
+        transform: rotate3d(0, 1, 0, 360deg)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div style="opacity: .9;"><img src="../img/src=http___dingyue.ws.126.net_2020_0515_465567a6j00qadpfz001cc000hs00b4c.jpg&refer=http___dingyue.ws.126.webp" alt=""></div>
+    <div style="opacity: .9;"><img src="../img/src=http___img.jj20.com_up_allimg_1113_051220112022_200512112022-1-1200.jpg&refer=http___img.jj20.webp" alt=""></div>
+    <div style="opacity: .9;"><img src="../img/src=http___img.jj20.com_up_allimg_1113_0F420110430_200F4110430-6-1200.jpg&refer=http___img.jj20.webp" alt=""></div>
+    <div style="opacity: .9;"><img src="../img/src=http___img.jj20.com_up_allimg_1114_0G020114924_200G0114924-15-1200.jpg&refer=http___img.jj20.webp" alt=""></div>
+    <div style="opacity: .9;"><img src="../img/src=http___img.jj20.com_up_allimg_4k_s_02_2109242312005c1-0-lp.jpg&refer=http___img.jj20.webp" alt=""></div>
+    <div style="opacity: .9;"><img src="../img/src=http___img.jj20.com_up_allimg_tp08_24041224115258-lp.jpg&refer=http___img.jj20.webp" alt=""></div>
+  </section>
+</body>
+
+</html>
